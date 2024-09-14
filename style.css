@@ -1,0 +1,242 @@
+*{
+    border: none;
+    padding: none;
+}
+.landscape{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.sky{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    z-index: -1;
+    background-color: blue;
+    animation: vilagos 10s;
+}
+
+.ocean{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    z-index: 0;
+    background-color: lightblue;
+
+}
+
+.solar{
+    position: absolute;
+    z-index: 0;
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    left: 550px;
+    bottom: 300px;
+    animation-name: felkel;
+    animation-duration: 10s;
+}
+
+.strand{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    background-image: url(strand.jpg);
+    z-index: 7;
+}
+
+.ship{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 100px;
+    left: 900px;
+    bottom: 100px;
+    flex-wrap: wrap;
+    z-index: 1;
+    animation-name: mozog;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+
+}
+
+.ship_up{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    height: 40px;
+    top: 0px;
+    bottom: 0px;
+    justify-content: center;
+    align-items: flex-end;
+
+    
+}
+
+.ship_bottom{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    height: 50px;
+    z-index: 3;
+
+    flex-wrap: nowrap;
+
+}
+
+
+[id^="s"]{
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: azure;
+
+}
+
+#s1{
+    border-bottom-left-radius:100%
+}
+#s3{
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+#s4{
+    background-color: azure;
+    width: 80px;
+    height: 30px;
+}
+
+#s5{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: coral;
+    border-radius: 50%;
+    left: 60px;
+    top: 40px;
+    z-index: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    animation-name: forog;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#s6{
+    position: relative;
+    width: 30px;
+    height: 80px;
+    background-color: azure;
+    bottom: 0px;
+    left: 40px;
+}
+
+.felho{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.nagyf{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background-color: darkslategrey;
+    top: 0px;
+    left: 0px;
+}
+
+.circle{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+}
+
+
+
+#plank1{
+    position: absolute;
+    height: 50px;
+    width: 10px;
+    transform: rotate(0deg);
+    background-color: brown;
+    
+}
+
+#plank2{
+    position: absolute;
+    height: 50px;
+    width: 10px;
+    transform: rotate(90deg);
+    background-color: brown;
+}
+
+#plank3{
+    position: absolute;
+    height: 50px;
+    width: 10px;
+    transform: rotate(45deg);
+    background-color: brown;
+}
+
+#plank4{
+    position: absolute;
+    height: 50px;
+    width: 10px;
+    transform: rotate(-45deg);
+    background-color: brown;
+}
+
+@keyframes felkel{
+    from{
+        bottom: 10px
+    }
+    to {
+        bottom: 300px;
+    }
+}
+
+@keyframes vilagos{
+    from{
+        background-color: black;
+    }
+    to {
+        background-color: blue;
+    }
+}
+
+@keyframes mozog{
+    0% {
+        left: 900px;
+    }
+    49% {
+        left: 100px;
+        transform: rotateY(0deg);
+    }
+    50%{
+        transform: rotateY(180deg);
+    }
+    99%{
+        left: 900px;
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes forog {
+    to{
+        transform: rotate(-360deg);
+    }   
+}
